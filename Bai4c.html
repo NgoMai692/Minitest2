@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4c</title>
+</head>
+<body>
+4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:
+c. Nhập vào a và b, tính tổng các số từ a đến b
+<input id= 'inputa' type="text">
+<input id= 'inputb' type="text">
+<input type="button" onclick="tinhTong()" value="tinhTong">
+<p id="display"></p>
+
+<script>
+    function tinhTong() {
+        let number1 = +document.getElementById('inputa').value;
+        let number2 = +document.getElementById('inputb').value;
+        if (number1 > number2) {
+            document.getElementById('display').innerHTML = ('tổng của dãy là: ' + (number1 - number2) * (number1 + number2) / 2);
+        } else {
+            document.getElementById('display').innerHTML = ('tổng của dãy là: ' + (number2 - number1) * (number1 + number2) / 2);
+        }
+    }
+</script>
+
+</body>
+</html>

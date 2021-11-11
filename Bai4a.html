@@ -9,12 +9,16 @@
 a. Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài
 cạnh a
 <input id= 'inputa' type="text">
+<input type="button" onclick="Hinhvuong()" value="Hinhvuong()">
 <p id="display4a1"></p>
 <p id="display4a2"></p>
+
 <script>
-    let canh = +document.getElementById('inputa').value
-    document.getElementById('display4a1').innerHTML=('Chu vi hình vuông là:'+canh*4);
-    document.getElementById('display4a2').innerHTML=('Diện tích hình vuông là:'+canh*canh);
+    function Hinhvuong() {
+        let canh = +document.getElementById('inputa').value
+        document.getElementById('display4a1').innerHTML = ('Chu vi hình vuông là:' + canh * 4);
+        document.getElementById('display4a2').innerHTML = ('Diện tích hình vuông là:' + canh * canh);
+    }
 </script>
 </body>
 </html>
