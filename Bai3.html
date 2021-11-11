@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3</title>
+</head>
+<body>
+3.Câu lệnh nào nhận vào giá trị từ 1 ô input. Viết code nhận a và b từ 2 ô
+input và hiển thị S = a*b ra thẻ h1.
+
+<input id="a" type="text">
+<input id="b" type="text">
+<input type="button" onclick="display()" value="Mul">
+<h1 id="display"></h1>
+<script>
+    function display() {
+        let S = document.getElementById('a').value * document.getElementById('b').value;
+        document.getElementById('display').innerText = ('Tích 2 số là: '+S);
+    }
+</script>
+</body>
+</html>

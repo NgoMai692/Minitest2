@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4b</title>
+</head>
+<body>
+4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:
+b. Nhập vào a và b, tính a^2, a^b
+<input id= 'inputa' type="text">
+<input id= 'inputb' type="text">
+<p id="display4b1"></p>
+<p id="display4b2"></p>
+<script>
+    let number1=+document.getElementById('inputa');
+    let number2=+document.getElementById('inputb');
+    document.getElementById('display4b1').innerHTML=('a mũ 2 là: '+number1**2);
+    document.getElementById('display4b2').innerHTML=('a mũ b là: '+number1**number2);
+</script>
+</body>
+</html>
