@@ -5,9 +5,17 @@
     <title>Bai4d</title>
 </head>
 <body>
-4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:
-d. Nhập vào a là năm, in ra thế kỉ.
-<input type="text">
-
+<!--4. Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:-->
+<!--d. Nhập vào a là năm, in ra thế kỉ.-->
+<input id="nam" type="text">
+<input type="button" onclick="timtheky()" value="Thế kỷ">
+<p id="display"></p>
+<script>
+    function timtheky(){
+        let nam=+document.getElementById("nam").value;
+        let theky= Math.floor(nam/100)+1;
+        document.getElementById("display").innerText=("Năm "+nam+" là Thế kỷ: "+theky);
+    }
+</script>
 </body>
 </html>
