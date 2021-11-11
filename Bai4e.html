@@ -10,7 +10,36 @@
 <!--ii. 1 tam giác cân?-->
 <!--iii. 1 tam giác đều?-->
 <!--iv. 1 tam giác vuông?-->
+<input id= "inputa" type="text">
+<input id= "inputb" type="text">
+<input id= "inputc" type="text">
+<input type="button" onclick="kiemTra()" value="kiemTra">
+<p id="display"></p>
+<script>
+    // alert(+document.getElementById("inputa").value)
 
+    function kiemTra() {
+        let canh1 = +document.getElementById("inputa").value;
+        let canh2 = +document.getElementById("inputb").value;
+        let canh3 = +document.getElementById("inputc").value;
+
+        if((canh1+canh2>canh3)&&(canh1+canh3>canh2)&&(canh2+canh3>canh1)){
+            if (canh1===canh2&&canh1===canh3){
+                document.getElementById("display").innerText=("3 số nhập vào là 3 cạnh của một tam giác đều")
+            }else if((canh1===canh2||canh1===canh3||canh2===canh3)&&(canh1*canh1===canh3*canh2||canh2*canh2===canh3*canh1||canh3*canh3===canh2*canh1)){
+                document.getElementById("display").innerText=("3 số nhập vào là 3 cạnh của một tam giác vuông cân")
+            }else if((canh1===canh2||canh1===canh3||canh2===canh3)){
+                document.getElementById("display").innerText=("3 số nhập vào là 3 cạnh của một tam giác cân")
+            }else if((canh1*canh1===canh3*canh2||canh2*canh2===canh3*canh1||canh3*canh3===canh2*canh1)){
+                document.getElementById("display").innerText=("3 số nhập vào là 3 cạnh của một tam giác vuông")
+            }else{
+                document.getElementById("display").innerText=("3 số nhập vào là 3 cạnh của một tam giác")
+            }
+        }else{
+            document.getElementById("display").innerText=('Ba số nhập vào không phải là 3 cạnh của một tam giác')
+        }
+    }
+</script>
 
 </body>
 </html>
